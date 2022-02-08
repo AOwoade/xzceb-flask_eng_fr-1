@@ -22,6 +22,7 @@ def english_to_french(english_text):
     etf = language_translator.translate(text = english_text,
     model_id = 'en-fr').get_result()
     french_text = etf['translations'][0]['translation']
+    print(type(french_text))
     return french_text
 
 def french_to_english(french_text):
@@ -29,4 +30,5 @@ def french_to_english(french_text):
     fte = language_translator.translate(text = french_text,
     model_id = 'fr-en').get_result()
     english_text = fte['translations'][0]['translation']
+    print(type(english_text))
     return english_text
